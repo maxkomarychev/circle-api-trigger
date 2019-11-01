@@ -51,5 +51,10 @@ workflows:
             branches:
               ignore: /.*/
       - build:
+          filters:
+            tags:
+              only: /^e2e-.*/
+            branches:
+              ignore: /.*/
           requires:
             - test
