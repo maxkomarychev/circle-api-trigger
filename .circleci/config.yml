@@ -47,8 +47,9 @@ workflows:
       - test:
           filters:
             tags:
-              only:
-                - e2e-*
+              only: /^e2e-.*/
+            branches:
+              ignore: /.*/
       - build:
           requires:
             - test
