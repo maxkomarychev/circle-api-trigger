@@ -26,13 +26,12 @@ jobs:
     version: 2
     docker:
       - image: debian:stretch
-    # steps:
-    #   - run: echo "hello?"
-    workflows:
-      - test
-      - build:
-          requires:
-            - test
+    steps:
+      workflows:
+        - test
+        - build:
+            requires:
+              - test
 
 workflows:
   version: 2
