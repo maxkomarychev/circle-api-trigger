@@ -46,9 +46,6 @@ workflows:
     jobs:
       - test:
           filters:
-            branches:
-              only:
-                never
             tags:
               only:
                 - e2e-*
