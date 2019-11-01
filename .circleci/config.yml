@@ -23,11 +23,11 @@ jobs:
           name: Print the Current Time
           command: date
   apijob:
-    # version: 2
+    version: 2
     docker:
       - image: debian:stretch
-    steps:
-      - run: echo "hello?"
+    # steps:
+    #   - run: echo "hello?"
     workflows:
       - test
       - build:
